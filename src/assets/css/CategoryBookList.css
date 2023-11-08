@@ -1,0 +1,18 @@
+.categories-container{
+
+    display: grid;
+    height: 600px;
+    /*direction: column;*/
+    grid-template-columns: 200px auto ;
+    align-items: inherit;
+    /* grid-template-rows: 50px 400px 100px; */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.620),rgba(0, 0, 0, 0.845)) ,url("../images/site/background.jpeg");
+    background-attachment: fixed;
+    background-size: 100%;
+}
+.book-lists {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    gap: 1em;
+}

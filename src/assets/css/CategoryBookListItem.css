@@ -1,0 +1,120 @@
+
+.book-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 1em;
+
+    /* height: 50px;
+    width:auto; */
+}
+
+.book-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-background-color);
+    padding-top: 1em;
+    padding-bottom: 1.4em;
+    gap: 0.25em;
+    height: 250px;
+    width:180px;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: small;
+    align-self: center;
+}
+
+.book-image {
+    align-self: center;
+    position: relative;
+}
+
+.book-author {
+    font-style: italic;
+    font-size: small;
+    font-weight: lighter;
+    align-self: center;
+}
+
+.book-price-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.book-price{
+    align-self: start;
+    font-size: x-small;
+    font-weight: lighter;
+}
+
+.book-rating {
+    align-self: end;
+    font-size: x-small;
+    font-weight: lighter;
+}
+
+.add-to-cart {
+    align-self: center;
+    position:relative;
+    font-size: x-small;
+    left: 0%;
+    font-weight: bold;
+    background-color: var(--primary-color-light);
+    border-radius: 5px 5px 5px 5px;
+    padding: 8px;
+}
+
+.add-to-cart:hover{
+    background-color: var(--primary-color);
+}
+
+.read-now {
+    align-self: center;
+    position: relative;
+    z-index: 2;
+    top: -80%;
+    left: 0%;
+    font-size: 10px;
+    font-weight: 400;
+    border-radius: 8px 8px 8px 8px;
+    background-color: rgba(61, 68, 67, 0.76);
+    padding: 4px;
+}
+
+/*.book-box {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: var(--card-background-color);*/
+/*    padding: 1em;*/
+/*    gap: 0.25em;*/
+/*}*/
+/*.book-price-rating {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-evenly;*/
+
+/*}*/
+
+/*.book-price{*/
+/*    align-self: start;*/
+/*    font-size: x-small;*/
+/*    font-weight: lighter;*/
+/*}*/
+
+/*.book-rating {*/
+/*    align-self: end;*/
+/*    font-size: x-small;*/
+/*    font-weight: lighter;*/
+/*}*/
+
+/*.book-title {*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*.book-author {*/
+/*    font-style: italic;*/
+/*}*/

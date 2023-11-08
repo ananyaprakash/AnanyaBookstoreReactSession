@@ -1,0 +1,118 @@
+
+header {
+    background: var(--secondary-background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0px;
+    /*align-items: flex-end;*/
+    padding: 0px;
+    gap: 0em;
+}
+
+/*header {*/
+/*    background: var(--secondary-background-color);*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: flex-end;*/
+/*    padding: 0.2em;*/
+/*    gap: 1em;*/
+
+/*}*/
+.left-header{
+    display: flex;
+    width: 200px;
+    padding-bottom: 0px;
+    align-items: flex-start;
+}
+/*.mid-header{*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    width: 800px;*/
+/*}*/
+
+
+.right-header{
+    display: flex;
+    width: 200px;
+    align-items: flex-end;
+
+}
+.text-logo {
+    font-family: var(--title-font-family);
+}
+.categories-button {
+    /*background-color: rgb(37, 34, 34, 0.95);*/
+    border-radius: 5px 5px 0px 0px;
+    /* padding: 5px; */
+    padding-bottom:10px;
+
+}
+
+.login-button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    border: 0px;
+
+}
+.login-button:hover{
+    background: var(--primary-color-dark);
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
+
+.cart-button{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-justify: auto;
+    border: 0px;
+
+}
+.cart-button:hover{
+    background: var(--primary-color-dark);
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+cart-container:hover{
+    background: var(--primary-color-dark);
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
+.cart-count-display {
+    position: absolute;
+    top:0px;
+    right: 11px;
+    font-weight: normal;
+
+    background-color: var(--primary-color-dark);
+    color: white;
+    border-radius: 50%;
+    padding: 0px 4px;
+    font-size: large;
+}
+
+/*.search-bar {*/
+/*    padding: 0.5em;*/
+/*}*/
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        margin:0px;
+        border: 0px;
+    }
+}

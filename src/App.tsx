@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import AppHeader from './components/AppHeader';
+import AppFooter from './components/AppFooter';
+import Home from './components/Home'
+import CategoryBookList from './components/CategoryBookList';
+import axios from "axios";
+import { SharedProvider, useSharedContext } from './contexts/SharedContext';
+
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route, useParams,
+} from "react-router-dom"
+import {useState, useEffect} from "react";
+import {cartReducer} from "./reducers/CartReducer";
+import {initialCartState} from "./types";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [categories, setCategories]  = useState([]);
+    useEffect(() => {
+        axios.get('/AnanyaBookstoreReactState/api/categories')
+            .then((result) => setCategories(result.data ))
+            .catch(console.error);
+    }, []);
+    // console.log({catId})
+
+
+    return (
+        <Router basename={"AnanyaBookstoreReactState"}>
+            <SharedProvider>
+                <AppHeader />
+                <Routes> home
+                    <Route path="/" element={<Home />} />
+                    <Route path="/categories" element={<CategoryBookList />} >
+                        <Route path =":catId" element={<CategoryBookList />}/>
+                    </Route>
+
+                    <Route path="*" element={<div>Page Not Found</div>} />
+                </Routes>
+
+                <AppFooter />
+            </SharedProvider>
+
+        </Router>
+    );
 }
 
 export default App;
+

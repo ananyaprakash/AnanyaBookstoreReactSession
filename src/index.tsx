@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CategoryContext from "./contexts/CategoryContext";
+import CartContext from "./contexts/CartContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+      <CartContext>
+      <CategoryContext>
     <App />
+      </CategoryContext>
+      </CartContext>
   </React.StrictMode>
 );
 

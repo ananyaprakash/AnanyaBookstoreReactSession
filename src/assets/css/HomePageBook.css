@@ -1,0 +1,36 @@
+.book-container{
+    display:flex;
+flex-direction: row;
+}
+.category-image-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.category-image-items a {
+    text-align: center;
+    padding: 20px 40px 40px 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.category-image-items img {
+    text-align: center;
+    padding-bottom: 30px;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+
+
+}
+
+.category-image-items div {
+    padding: 0.5em 0;
+    background: rgba(0, 0, 0, 0.5); /* last # is percent opacity */
+    color: white;
+    transform: translateY(-0.25em);
+    margin-bottom: -2em;
+}
+
